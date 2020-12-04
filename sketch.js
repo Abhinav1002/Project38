@@ -154,7 +154,7 @@ function draw() {
   if(mousePressedOver(restart)) {
       reset();
     }
-    camera.position.x=trex.x
+    camera.position.x=300
     camera.position.y=100
 
 
