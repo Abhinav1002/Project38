@@ -52,10 +52,10 @@ function setup() {
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
   
-  gameOver = createSprite(300,100);
+  gameOver = createSprite(100,70);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(300,140);
+  restart = createSprite(100,110);
   restart.addImage(restartImg);
   
  
@@ -86,6 +86,8 @@ function draw() {
   
   if(gameState === PLAY){
 
+    camera.position.x=trex.x
+    camera.position.y=100
     gameOver.visible = false;
     restart.visible = false;
     
@@ -154,8 +156,8 @@ function draw() {
   if(mousePressedOver(restart)) {
       reset();
     }
-    camera.position.x=300
-    camera.position.y=100
+    /*camera.position.x=300
+    camera.position.y=100*/
 
 
   drawSprites();
